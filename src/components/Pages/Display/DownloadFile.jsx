@@ -24,10 +24,9 @@ export default function DownloadFile({photo,setshowPopUp}){
             alert('Downloading !!!');
             downloaded();
         }
-            try{
-                await axios.put('/updatefile', staffData);
-                alert('Downloading P !!!');
-                downloaded();
+        try{  
+            alert('Downloading P !!!');
+            downloaded();
             }catch(e){
                 alert('error');
             }

@@ -5,6 +5,7 @@ import Folder from './models/Share.js';
 import SingleShare from './models/SingleShare.js';
 
 import express from 'express';
+import { ObjectId } from 'mongodb';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import bcrypt from 'bcryptjs';
@@ -18,7 +19,6 @@ import { fileURLToPath } from 'url';
 import zip from 'express-zip';
 import admzip from 'adm-zip';
 import moment from 'moment';
-import { url } from 'inspector';
 
 dotenv.config();
 
@@ -154,26 +154,16 @@ app.post('/staff', (req,res)=>{
         }
     });
 });
-//Storage path for files uploaded
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'uploads/')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.originalname)
-    }
-  })
-
-const upload = multer({storage: storage})
 
 //Uploading files
-// const filesMiddleware = multer({dest:"uploads/"})
-app.post('/upload',upload.array('file', 100),(req,res)=>{
+const filesMiddleware = multer({dest:"uploads/"})
+app.post('/upload',filesMiddleware.array('file', 100),(req,res)=>{
     const uploadedFiles = [];
     for(let i=0; i < req.files.length; i++){
         const {path, originalname} = req.files[i];
         const parts = originalname.split('.');
-        const newPath = path;
+        const ext = parts[parts.length -1];
+        const newPath = path + '.' + ext;
         fs.renameSync(path, newPath);
         uploadedFiles.push(newPath.replace('uploads\\',''));
     }
@@ -217,7 +207,6 @@ app.put('/staff', async(req,res) =>{
 
 //Deleteing folders
 app.delete('/folderdel/:id', async(req,res) =>{
-    var ObjectId = require('mongodb').ObjectId
     const {id} = req.params;
     const convertedObjectId = new ObjectId(id);
         await Staff.deleteOne({_id: convertedObjectId });
@@ -233,12 +222,12 @@ app.put('/deletephase1', async(req,res) =>{
             res.json('ok');   
 });
 app.delete('/deletephase2/:id', async(req,res) =>{
-    var ObjectId = require('mongodb').ObjectId
     const {id} = req.params;
     const convertedObjectId = new ObjectId(id);
         await User.deleteOne({_id: convertedObjectId });
             res.json('successfully deleted');   
 });
+
 //Display all files
 app.get('/services', async(req,res)=>{
     const {token} = req.cookies;
@@ -319,7 +308,6 @@ app.post("/shares",async(req,res) => {
 app.get('/shared', (req,res) => {
     const {token} = req.cookies;
     jwt.verify(token, jwtSecret, {}, async (err, userData)=>{
-        var ObjectId = require('mongodb').ObjectId;
         const {id} = userData;
         const convertedObjectId = new ObjectId(id);
         res.json(await Folder.find({$or:[{sender:convertedObjectId},{receiver:convertedObjectId}]}).populate('folder') );
@@ -328,7 +316,6 @@ app.get('/shared', (req,res) => {
 app.get('/userlocate', (req,res) => {
     const {token} = req.cookies;
     jwt.verify(token, jwtSecret, {}, async (err, userData)=>{
-        var ObjectId = require('mongodb').ObjectId;
         const {id} = userData;
         const convertedObjectId = new ObjectId(id);
         res.json(await User.find({_id: convertedObjectId}));
@@ -363,7 +350,6 @@ app.put('/updatefile', async(req,res) =>{
     const {filenam,check} = req.body;
     const {token} = req.cookies;
     jwt.verify(token, jwtSecret, {}, async (err, userData)=>{
-        var ObjectId = require('mongodb').ObjectId;
         const {id} = userData;
         const convertedObjectId = new ObjectId(id);
 
@@ -381,7 +367,6 @@ app.get("/single-download",async(req, res) => {
     const {token} = req.cookies;
     jwt.verify(token, jwtSecret, {}, async (err, userData)=>{
         if(err) throw err;
-        var ObjectId = require('mongodb').ObjectId;
         const {id} = userData;
         const convertedObjectId = new ObjectId(id);
         const fileDoc = await File.findOne({owner:convertedObjectId});

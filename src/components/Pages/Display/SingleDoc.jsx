@@ -25,10 +25,14 @@ export default function SingleDoc(){
 
     async function downloadButton(ev){
         ev.preventDefault();
-        await axios.get(`/download/${id}`).then(response =>{
-            setDownld(response.data);
-        })
-        alert("Success?");
+        try{
+            await axios.get(`/download/${id}`).then(response =>{
+                setDownld(response.data);
+            })
+            alert("Success?");
+        }catch(e){
+            alert("Error");
+        }
     };
 
     return(

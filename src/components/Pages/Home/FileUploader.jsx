@@ -21,8 +21,7 @@ export default function FileUploader({id,files,onChange,singleFile,setSingleFile
         }
         axios.post('/upload',data,{
             headers: {   
-            'Content-type':'multipart/form-data',
-            Accept:"application/json"}
+            'Content-type':'multipart/form-data'}
         }).then(response => {
             const {data:filenames} = response;
             onChange(prev => {
