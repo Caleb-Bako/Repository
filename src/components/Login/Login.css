@@ -1,0 +1,113 @@
+.formpg{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    margin: 0px 13px;
+    color: lawngreen;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.close-btns{
+    position: fixed;
+    top: 41px;
+    right: 450px;
+    color: white;
+    padding: 7px 6px;
+    border-radius: 999px;
+    background-color:lawngreen ;
+    cursor: pointer;
+}
+.formpg h2{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+}
+input{
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+.loginheader{
+    padding-bottom: 50px;
+    padding-left: 100px;
+}
+.loginheader2{
+    padding-bottom: 30px;
+    padding-left: 100px;
+}
+.hlabel{
+    padding-bottom: 10px;
+}
+.bl{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+}
+.b2{
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+}
+.login-shapes{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.circle:last-child{
+    background: linear-gradient(
+        to right,
+        #3ee577,
+        lawngreen
+    );
+    right: -30px;
+    bottom: -80px;
+}

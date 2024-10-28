@@ -1,0 +1,194 @@
+.file-strt{
+    border: none;
+    padding: 6px 14px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 150px;
+}
+.folder-picc{
+    width: 20px;
+    height: 20px;
+    color: #3ee577;
+}
+.file-namex{
+    font-weight: bold;
+    align-items: center;
+    color: rgb(135, 173, 222);
+}
+.file-namez{
+    font-weight: bold;
+    align-items: center;
+    color: rgb(135, 173, 222);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.fiz{
+    width: 150px;
+}
+.s-titl{
+    display: flex;
+    gap: 46.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.s-titls{
+    display: flex;
+    gap: 18.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.s-titlz{
+    display: flex;
+    gap: 18.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.share-str{
+    font-size: small;
+    display: flex;
+    align-items: center;
+    gap: 7.5%;
+    background-color: #f0f0f0;
+    margin-bottom: 3px;
+}
+@media(min-width:280px){
+
+}
+@media(min-width:360px){
+    .file-namex{
+        width: 60px;
+    }
+    .file-namezd{
+        width: 60px;
+    }
+    .share-str{
+        font-size: smaller;
+        gap: 2px;
+    }
+    .folder-picc{
+        width: 10px;
+        height: 10px;
+    }
+    .file-strt{
+        width: 80px;
+    }
+    .file-id{
+        font-size: smaller;
+        border-right:3px solid lightgreen;
+        padding-right: 2px;
+    }
+    .fiz,.file-iden{
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .file-iden,.stil{
+        display: none;
+    }
+    .file{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    .inactive-sect{
+        display: none;
+    }
+    .exodus{
+        display: flex;
+        gap: 5px;
+        padding: 6px;
+    }
+    .s-titlz,.s-titlz{
+        gap: 30%;
+    }
+}
+@media(min-width:412px){
+    .share-str{
+        font-size: smaller;
+        gap: 5%;
+    }
+    .folder-picc{
+        width: 10px;
+        height: 10px;
+    }
+    .file-strt{
+        width: 80px;
+    }
+    .file-id{
+        font-size: xx-small;
+    }
+    .fiz,.file-iden{
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media(min-width:717px){
+    .share-str{
+        gap: 20%;
+    }
+    .file{
+        gap: 110%;
+    }
+    .exodus{
+        gap: 11%;
+
+    }
+    .file-id{
+        padding-right: 8px;
+    }
+}
+@media(min-width:1024px){
+    .share-str{
+        gap: 43%;
+        font-weight: bolder;
+    }
+    .Genesis{
+        display: flex;
+        gap: 10%;
+        background-color: #f0f0f0;
+        margin-bottom: 5px;
+    }
+    .stil{
+        display: block;
+    }
+    .s-titlz{
+        display: none;
+    }
+    .inactive-sect{
+        display: block;
+    }
+    .file-id{
+        border: none;
+        font-size: x-small;
+        font-weight: bolder;
+    }
+}
+@media(min-width:1024px){
+    .share-str{
+        gap: 50%;
+    }
+    .Genesis{
+        gap: 23%;
+    }
+    .exodus{
+        gap: 38%;
+    }
+    .file-namex{
+        width: 60px;
+    }
+    .file-strt{
+        width: 100px;
+    }
+}

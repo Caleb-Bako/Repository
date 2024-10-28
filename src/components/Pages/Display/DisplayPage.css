@@ -1,0 +1,325 @@
+/* DisplayPage */
+.display-page{
+    padding: 10px;
+    background-color: white;
+}
+.contentPic{
+    width: 100px;
+    height: 100px;
+}
+.add-file{
+    display: flex;
+    gap: 48%;
+}
+.add-file-btn{
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    padding: 8px 4px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: rgb(135, 173, 222);
+    margin-bottom: 12px;
+}
+.file-strs{
+    border: none;
+    padding: 6px 14px;
+    display: flex;
+    gap: 55%;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-bottom: 3px;
+}
+.file-strstt{
+    border: none;
+    padding: 6px 14px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-bottom: 3px;
+}
+.folder-pic{
+    width: 20px;
+    height: 20px;
+    color: #3ee577;
+}
+.single-doc input[type="text"]{
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    width: 100%;
+}
+/* GenDisplay */
+.Doc{
+    width: 100px;
+    height: 100px;
+}
+.folder-titles{
+    background: rgb(135, 173, 222);
+    color: #fff;
+    padding: 8px 14px;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 30%;
+    font-size: small;
+    font-weight: bold;
+}
+.folder-title{
+    background: #3ee577;
+    color: #fff;
+    padding: 8px 24px;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 30%;
+    font-size: small;
+    font-weight: bold;
+}
+.headings{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.hpics{
+    width: 20px;
+    height: 20px;
+}
+.instrcs{
+    font-size: xx-large;
+    font-weight: bold;
+}
+/* SingleDoc */
+.main{
+    background: #f0f0f0;
+    padding: 40px 20px 0px 20px;
+    height: 100vh;
+}
+.single-doc{
+    padding: 10px 10px 24% 10px;
+    background: white;
+    box-shadow: 0 0 6px rgba(8,7,16,0.6);
+    height: 100vh;
+}
+.single-doc input {
+    width: 400px;
+    border-radius: 0px;
+    color: #f0f0f0;
+}
+.single-doc :hover{
+    cursor: pointer;
+}
+.file-pics{
+    width: 40px;
+    height: 40px;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.popup-container{
+    max-width: 640px;
+    width: 100%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+.modal-right{
+    width: 100%;
+}
+.close-btn{
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    color: black;
+    cursor: pointer;
+}
+.pop-content{
+    color: black;
+    padding: 5px 6px 5px 35%;
+    justify-content: center;
+}
+.pop-btn{
+    margin: 5px 6px 5px 11%;
+}
+
+.download-folder{
+    display: flex;
+    gap: 84%;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.single-downloads{
+    font-size: small;
+}
+.file-name{
+    font-weight: bold;
+    align-items: center;
+    color: rgb(135, 173, 222);
+}
+.group-name{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    gap: 5%;
+}
+.download-btn{
+    display: flex;
+    align-items: center;
+    font-size: small;
+    gap: 5px;
+}
+.d-id{
+    display: none;
+}
+@media(max-width:280px){
+    .instrc{
+        font-size: small;
+        width: 95%;
+    }
+    .instrcs{
+        font-size: small;
+    }
+    .add-file{
+        gap: 35%;
+    }
+    .add-file-btn{
+        padding: 5px 5px 15px 10px;
+        width: 80px;
+        height: 10px;
+    }
+    .folder-titles{
+        gap: 50%;
+        font-size: xx-small;
+    }
+    .main{
+        font-size: x-small;
+    }
+    .hpics{
+        width: 10px;
+        height: 10px;
+    }
+    .download-folder{
+        gap: 50%;
+    }
+    .file-strs{
+        gap: 25%;
+        font-size: x-small;
+    }
+    .group-name{
+        width: 140px;
+    }
+    
+}
+@media(min-width:360px){
+    .instrc{
+        font-size: small;
+        width: 95%;
+    }
+    .add-file{
+        gap: 15%;
+    }
+    .add-file-btn{
+        padding: 10px 5px 10px 10px;
+        width: 100px;
+    }
+    .folder-titles{
+        gap: 50%;
+    }
+    .download-folder{
+        gap: 50%;
+    }
+    .file-strs{
+        gap: 35%;
+    }
+    .group-name{
+        width: 150px;
+    }
+}
+
+@media(min-width:412px){
+    .instrc{
+        font-size: small;
+        width: 95%;
+    }
+    .add-file{
+        gap: 25%;
+    }
+    .add-file-btn{
+        padding: 10px 5px 10px 10px;
+        width: 100px;
+    }
+    .folder-titles{
+        gap: 50%;
+    }
+    .download-folder{
+        gap: 55%;
+    }
+    .file-strs{
+        gap: 30%;
+    }
+    .group-name{
+        width: 200px;
+    }
+
+
+}
+@media(min-width:540px){
+    .instrc{
+        font-size: small;
+        width: 100%;
+    }
+    .add-file{
+        gap: 45%;
+    }
+    .folder-titles{
+        gap: 50%;
+    }
+    .download-folder{
+        gap: 68%;
+    }
+    .group-name{
+        width: 300px;
+    }
+
+}
+@media(min-width:717px){
+    .instrc{
+        font-size: small;
+        width: 100%;
+    }
+    .add-file{
+        gap: 62%;
+    }
+    .folder-titles{
+        gap: 50%;
+    }
+    .download-folder{
+        gap: 77%;
+    }
+    .group-name{
+        width: 430px;
+    }
+}
+@media(min-width:1024px){
+    .instrc{
+        font-size: small;
+        width: 100%;
+    }
+    .add-file{
+        gap: 70%;
+    }
+    .folder-titles{
+        gap: 50%;
+    }
+    .download-folder{
+        gap: 80%;
+    }
+    .file-strs{
+        gap: 50%;
+    }
+}

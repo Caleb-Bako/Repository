@@ -1,0 +1,545 @@
+.admin-bg{
+    padding: 10px 10px 24% 10px;
+    background: white;
+    box-shadow: 0 0 6px rgba(8,7,16,0.6);
+    width: 100%;
+    height: 100vh;
+}
+.customers{
+    display: flex;
+    gap: 15px;
+    padding: 6px 4px;
+    margin-bottom: 5px;
+    font-size: small;
+}
+.fiddd{
+    gap: 3%;
+}
+.s-titles{
+    display: flex;
+    gap: 10.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.s-title{
+    display: flex;
+    gap: 10.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.s-titlez{
+    display: flex;
+    gap: 10.5%;
+    padding: 5px 0px 3px 5px;
+    color:white;
+    margin-bottom: 5px;
+    background-color:lightgreen;
+}
+.customer-ids,.customer-named,.customer-emaild,.customer-roled{
+    border-right:3px solid white;
+    margin-top: 7px;
+    margin-right: 4px;
+    padding-right: 4px;
+    padding-left: 6px;
+}
+.customer-id,.customer-name,.customer-email,.customer-role{
+    border-right:3px solid white;
+    margin-top: 7px;
+    padding-right: 4px;
+}
+.fidl{
+    border-right: none;
+}
+.customer-id{
+    width: 244px;
+}
+
+.customer-email{
+    width: 240px;
+}
+.customer-role{
+    width: 50px;
+}
+.customer-id{
+    width: 254px;
+}
+.customer-name{
+    width: 120px;
+    font-weight: bolder;
+}
+.customer-emaild{
+    width: 280px;
+}
+.customer-rolez{
+    width: 100px;
+    display: flex;
+    gap: 4px;
+}
+.role-btn{
+    display: flex;
+    gap: 5px;
+}
+.top-section{
+    align-items: center;
+    padding: 8px 5px;
+    display: flex;
+    gap: 80%;
+}
+.add-files{
+    background-color: white;
+    color: burlywood;
+    border-radius: 99px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+.tab-list{
+    display: flex;
+    gap: 15%;
+    list-style: none;
+    padding: 8px;
+    font-size: small;
+    font-weight: bolder;
+}
+.tab-list:hover{
+    cursor: pointer;
+}
+.tab-heading{
+    padding-left:5%;
+}
+.tab-title{
+    border: none;
+}
+.active-title{
+    background-color: rgb(135, 173, 222);
+    padding: 6px 5px;
+    border-radius: 6px;
+    color: white;
+    /* border-bottom: 3px solid rgb(135, 173, 222); */
+}
+.tab-content{
+    display: none;
+}
+.sadmin{
+    margin: 8% 30px 20px 35%;
+}
+.inactive-section{
+    display: none;
+}
+.customers-details{
+    display: flex;
+    padding: 6px;
+}
+.customers-detail{
+    display: flex;
+    background-color:#f0f0f0 ;
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+@media(min-width:280px){
+    .customers{
+        font-size: smaller
+    }
+    .cfunct{
+        background-color:#f0f0f0 ;
+    }
+    .cuss{
+        background-color:#f0f0f0 ;
+        margin-bottom: 4px;
+    }
+    .customer-id{
+        border: none;
+    }
+    .customer-email{
+        width: 200px;
+    }
+    .selct{
+        display: block;
+        gap: 20%;
+    }
+    .vanish{
+        display: none;
+    }
+    .functs{
+        display: flex;
+        background-color:#f0f0f0 ;
+        padding: 7px;
+    }
+    .hiddens{
+        display: none;
+    }
+}
+@media(min-width:360px){
+
+    .drop-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .drop-icons{
+        width: 20px;
+        height: 20px;
+    }
+    .tab-list{
+        font-size: xx-small;
+        gap: 4%;
+        padding: 4px;
+    }
+    .top-section{
+        gap: 25%;
+    }
+    .customer-ids{
+        border: none;
+        width: 100px;
+        font-size: x-small;
+        padding: 0px;
+        margin: 2px;
+
+    }
+    .customer-emaild{
+        width: 100px;
+        font-size: x-small;
+    }
+    .customer-named{
+        font-size: x-small;
+    }
+    .customer-roled{
+        width: 30px;
+        font-size:xx-small;
+        padding: 0px 2px;
+        margin: 2px;
+    }
+
+    .customer-rolez{
+        width: 50px;
+        font-size: x-small;
+        display: flex;
+        margin: 2px;
+
+    }
+    .customer-email{
+        width: 80px;
+        font-size: x-small;
+        padding-left: 1px;
+    }
+    .customer-name{
+        width: 50px;
+        padding-left: 5px;
+    }
+    .customer-role{
+        width: 30px;
+    }
+    .customer-id{
+        width: 154px;
+        font-size: x-small;
+    }
+}
+@media(min-width:412px){
+    .active-section{
+        font-size: smaller;
+    }
+    .customers{
+        font-size: x-small;
+        font-weight: bolder;
+        padding: 4px;
+        height: 30px;
+        gap: 1px;
+        margin-bottom: 15px;
+    }
+    .customers-details{
+        display: flex;
+        padding: 6px;
+    }
+    .drop-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .customer-ids{
+        border: none;
+        width: 100px;
+        font-size: x-small;
+        padding: 0px;
+        margin: 2px;
+
+    }
+    .customer-emaild{
+        width: 180px;
+        font-size: x-small;
+    }
+    .customer-named{
+        font-size: x-small;
+    }
+    .customer-roled{
+        width: 30px;
+        font-size:xx-small;
+        padding: 0px 2px;
+        margin: 2px;
+    }
+
+    .customer-rolez{
+        width: 50px;
+        font-size: x-small;
+        display: flex;
+        margin: 2px;
+
+    }
+    .tab-list{
+        font-size: smaller;
+        gap: 7%;
+        padding: 4px;
+    }
+    .top-section{
+        gap: 35%;
+    }
+    .customer-email{
+        width: 100px;
+        font-size: smaller;
+        padding-left: 5px;
+    }
+    .customer-name{
+        width: 70px;
+        padding-left: 5px;
+        margin-bottom: 5px;
+        
+    }
+    .customer-role{
+        width: 50px;
+    }
+    .customer-id{
+        width: 100px;
+        font-size: smaller;
+    }
+}
+@media(min-width:540px){
+    .customer{
+        font-size: small;
+    }
+    .customer-emaild{
+        width: 230px;
+    }
+    .customer-named{
+        width: 80px;
+    }
+    .top-section{
+        gap: 37%;
+    }
+    .customer-rolez{
+        font-size: x-small;
+    }
+    .selct{
+        display: flex;
+        gap: 10%;
+    }
+    .customer-email{
+        width: 120px;
+        font-size: x-small;
+        padding-left: 1px;
+    }
+    .customer-name{
+        width: 70px;
+        padding-left: 15px;
+    }
+    .customer-role{
+        width: 65px;
+    }
+    .drop-icons{
+        margin-left: 30px;
+    }
+    .functs{
+        gap: 10%;
+    }
+}
+@media(min-width:717px){
+    .customer{
+        font-size: small;
+    }
+    .customer-roled{
+        width: 77px;
+    }
+    .customer-emaild{
+        width: 400px;
+    }
+    .top-section{
+        gap: 57%;
+    }
+    .tab-list{
+        gap: 13%;
+    }
+    .selct{
+        gap: 20%;
+    }
+    .drop-icons{
+        margin-left: 180px;
+    }
+    .functs{
+        gap: 10%;
+    }
+}
+@media(min-width:1024px){
+    .drop-icon{
+        display: none;
+    }
+    .show-content{
+        font-size: larger;
+    }
+    .cuss{
+        display: flex;
+      
+    }
+    .inactive-section{
+        display: flex;
+        gap: 43%;
+    }
+    .s-titlez,.s-title{
+        display: none;
+    }
+    .customers{
+        gap: 7%;  
+    }
+    .vanish{
+        display: block;
+        padding-left: 2%;
+    }
+    .customers-details{
+        gap: 13%;
+    }
+    .allfolders{
+        display: flex;
+        background-color:#f0f0f0 ;
+        margin-bottom: 5px;
+    }
+    .customer-emaild,.customer-ids,.customer-named,.customer-roled{
+        font-size: larger;
+    }
+    .customer-id{
+        border: none;
+    }
+    .customer-roled{
+        width: 100px;
+    }
+    .customer-named{
+        width: 100px;
+    }
+    .customer-emaild{
+        width: 150px;
+        padding-left: 7%;
+        font-size: larger;
+    }
+    .top-section{
+        gap: 67%;
+    }
+    .selct{
+        gap: 45%;
+    }
+    .tab-list{
+        gap: 17%;
+        font-size: larger;
+    }
+    .s-titles{
+        gap: 10.5%;
+    }
+    .drop-icons{
+        display: none;
+    }
+    .cfunct{
+        display: flex;
+        align-items: center;
+    }
+    .customer-email{
+        width: 130px;
+        font-size: x-small;
+        padding-left: 5px;
+    }
+    .customer-name{
+        width: 100px;
+        padding-left: 18px;
+    }
+    .customer-role{
+        width: 100px;
+    }
+    .customer-id{
+        width: 154px;
+        font-size: x-small;
+    }
+    .hiddens{
+        display: flex;
+    }
+}
+@media(min-width:1280px){
+    .drop-icon{
+        display: none;
+    }
+    .show-content{
+        font-size: larger;
+    }
+    .cuss{
+        display: flex;
+      
+    }
+    .selct{
+        gap: 55%;
+    }
+    .vanish{
+        padding-left: 1%;
+    }
+    .inactive-section{
+        display: flex;
+        gap: 83%;
+    }
+    .s-titlez{
+        display: none;
+    }
+    .customers{
+        gap: 13%;  
+    }
+    .customers-details{
+        gap: 10%;
+    }
+    .customer-emaild,.customer-ids,.customer-named,.customer-roled{
+        font-size: larger;
+    }
+    .customer-id{
+        border: none;
+    }
+    .customer-roled{
+        width: 100px;
+    }
+    .customer-named{
+        width: 100px;
+    }
+    .customer-emaild{
+        width: 300px;
+        padding-left: 12%;
+        font-size: larger;
+    }
+    .top-section{
+        gap: 67%;
+    }
+    .tab-list{
+        gap: 17%;
+    }
+    .s-titles{
+        gap: 14.5%;
+    }
+    .customer-email{
+        width: 200px;
+        font-size: x-small;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .customer-name{
+        width: 180px;
+        padding-left: 18px;
+    }
+    .customer-role{
+        width: 160px;
+    }
+    .customer-id{
+        width: 154px;
+        font-size: x-small;
+    }
+}

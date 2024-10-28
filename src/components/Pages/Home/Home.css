@@ -1,0 +1,257 @@
+.home-page{
+    background: #f0f0f0;
+    padding: 40px 20px 0px 20px;
+    height: 100vh;
+}
+
+/* FileUploader */
+.fileUploader{
+    background: #f0f0f0;
+    padding: 20px 20px ;
+    height: fit-content;
+    display: flex;
+}
+.fstr{
+    padding: 10px 10px 24% 10px;
+    background: white;
+    box-shadow: 0 0 6px rgba(8,7,16,0.6);
+    height: 430px;
+}
+.fnm{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(255,255,255,0.1);
+    width: 1124px;
+}
+.hidden{
+    visibility: hidden;
+    width: 0px;
+}
+.uploadPic{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.uploadButton{
+    border: 2px solid rgb(135, 173, 222);
+    width: 155px;
+    height: 95px;
+    padding: 12px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 6px;
+}
+.upload{
+    width: 100px;
+    height: 100px;
+}
+.upload-button{
+    margin: 4% 20px 10px 4px;
+
+    padding: 8px 47%;
+}
+.folder-pics{
+    width: 40px;
+    height: 40px;
+}
+.group-names{
+    align-items: center;
+    display: flex;
+    padding: 10px 8px;
+    border-radius: 6px;
+    width: 1024px;
+    background-color: #ddffdd;
+}
+.tags{
+    display: flex;
+    gap: 87%;
+}
+.share-containerz{
+    width: 40px;
+    height: 64px;
+    padding: 18px 3px;
+    background-color: rgb(135, 173, 222);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+.file-form{
+    display: flex;
+    align-items: center;
+    gap: 87%;
+    margin-top: 2%;
+}
+.file-form label{
+    width: 80px;
+    height: 64px;
+    padding: 10px 13px 10px 16px ;
+    background-color: rgb(135, 173, 222);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: all 300ms ease-in;
+}
+.file-form label :hover{
+    border-color: #646cff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.share-btn{
+    width: 40px;
+    height: 20px;
+    color: white;
+}
+.f-sect{
+    display: flex;
+    align-items: center;
+}
+.user-location{
+    display: flex;
+    gap: 4px;
+    color: lightgreen;
+    font-size: small;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.file-name{
+    width: 1020px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+.trashd{
+    position: absolute;
+    bottom: -8px;
+    right: -1px;
+    color: white;
+    background-color:rgb(135, 173, 222) ;
+    width: 25px;
+    height: 27px;
+    padding: 4px;
+    opacity: 40%;
+    cursor: pointer;
+  }
+  
+
+
+@media(min-width:280px){
+    .upload-button{
+        padding: 8px 38%;
+    }
+    .file-form{
+        gap: 22%;
+        margin: 20px 0px;
+    }
+    .fileUploader{
+        flex-direction: column;
+    }
+    .group-names{
+        font-size: small;
+        width: 150px;
+    }
+    .folder-pics{
+        width: 20px;
+        height: 20px;
+    }
+    .share-containerz{
+        width: 40px;
+        height: 40px;
+    }
+    .share-btn{
+        width: 20px;
+        height: 30px;
+    }
+    .tags{
+        gap: 42%;
+        font-size: small;
+    }
+    
+}
+@media(min-width:360px){
+    .upload-button{
+        padding: 8px 42%;
+    }
+    .file-form{
+        margin: 20px 0px;
+        gap: 50%;
+    }
+    .group-names{
+        font-size: small;
+        width: 250px;
+    }
+    .folder-pics{
+        width: 20px;
+        height: 20px;
+    }
+    .share-containerz{
+        width: 40px;
+        height: 40px;
+    }
+    .share-btn{
+        width: 20px;
+        height: 30px;
+    }
+    .tags{
+        gap: 49%;
+        font-size: medium;
+    }
+}
+@media(min-width:412px){
+    .upload-button{
+        padding: 8px 40%;
+    }
+    .group-names{
+        font-size: small;
+        width: 250px;
+    }
+    .tags{
+        gap: 55%;
+    }
+}
+@media(min-width:540px){
+    .upload-button{
+        padding: 8px 42%;
+    }
+    .file-form{
+        gap: 67%;
+    }
+    .tags{
+        gap: 66%;
+    }
+    .group-names{
+        font-size: small;
+        width: 410px;
+    }
+
+}
+@media(min-width:717px){
+    .upload-button{
+        padding: 8px 45%;
+    }
+    .file-form{
+        gap: 77%;
+    }
+    .tags{
+        gap: 78%;
+    }
+    .group-names{
+        font-size: small;
+        width: 650px;
+    }
+}
+@media(min-width:1024px){
+    .upload-button{
+        padding: 8px 47%;
+    }
+    .file-form{
+        gap: 82%;
+    }
+    .tags{
+        gap: 82.5%;
+    }
+    .group-names{
+        font-size: small;
+        width: 1150px;
+    }
+}
