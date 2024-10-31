@@ -4,7 +4,7 @@ const {Schema} = mongoose;
 const staffSchema = new Schema({
     owner: {type:mongoose.Schema.Types.ObjectId, ref:'User'},
     name:String,
-    profile:[String],
+    files:[String],
     form: String,
     location:[String],
     time : { type : String , default: Date.now }

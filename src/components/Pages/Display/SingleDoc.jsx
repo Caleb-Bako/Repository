@@ -12,6 +12,7 @@ export default function SingleDoc(){
     const[place,setPlace] = useState(null);
     const[downld,setDownld] = useState('')
     const[ck,setCk] = useState('');
+    const [folderName,setFolderName] = useState('');
     const[showPopUp, setshowPopUp] = useState(false);
     useEffect(()=>{
         if(!id){
@@ -23,18 +24,25 @@ export default function SingleDoc(){
     },[id]);
     if(!place) return '';
 
-    async function downloadButton(ev){
+    async function downloadAllFiles(ev) {
         ev.preventDefault();
-        try{
-            await axios.get(`/download/${id}`).then(response =>{
-                setDownld(response.data);
-            })
-            alert("Success?");
-        }catch(e){
-            alert("Error");
+        const foldername = place.name
+        try {
+            const response = await axios.get(`/download-folder/${foldername}`, {
+                responseType: 'blob'
+            });
+            const blob = new Blob([response.data], { type: 'application/zip' });
+            const downloadUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = `${foldername}.zip`;
+            link.click();
+            URL.revokeObjectURL(downloadUrl); // Clean up after download
+        } catch (error) {
+            console.error("Error downloading folder:", error);
         }
-    };
-
+    }
+    
     return(
         <div>
             <PopUp open={showPopUp} onClose={() => setshowPopUp(false)} />
@@ -43,11 +51,11 @@ export default function SingleDoc(){
                 <div className="download-folder" >
                     <DownloadId ck={ck} setCk={setCk}/>
                         <div>
-                            <button onClick={downloadButton} className="download-btn"> 
+                            <button onClick={(ev) => downloadAllFiles(ev)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="folder-pic">
-                                        <path d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3 3V18a3 3 0 003 3h15zM1.5 10.146V6a3 3 0 013-3h5.379a2.25 2.25 0 011.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 013 3v1.146A4.483 4.483 0 0019.5 9h-15a4.483 4.483 0 00-3 1.146z" />
-                                </svg>
-                                Download Folder
+                                            <path d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3 3V18a3 3 0 003 3h15zM1.5 10.146V6a3 3 0 013-3h5.379a2.25 2.25 0 011.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 013 3v1.146A4.483 4.483 0 0019.5 9h-15a4.483 4.483 0 00-3 1.146z" />
+                                    </svg>
+                                    Download Folder
                             </button>
                         </div>
                 </div>
@@ -60,10 +68,8 @@ export default function SingleDoc(){
                                 </div>
                                 <div>Name</div>
                             </div>
-                            
                         </div>
-            {place.profile.length > 0 && place.profile.map((photo) => (
-                
+                    {place.files.length > 0 && place.files.map((photo) => (
                         <div key={photo} className="file-strs single-downloads">
                             <div>
                                 <div className="group-name " >
@@ -81,7 +87,7 @@ export default function SingleDoc(){
                                 {photo}
                             </div> */}
                             <div>
-                                <DownloadFile photo={photo} setshowPopUp={setshowPopUp} />
+                                <DownloadFile photo={photo} setshowPopUp={setshowPopUp} folderName={place.name}/>
                             </div>
                     </div>    
                 ))}

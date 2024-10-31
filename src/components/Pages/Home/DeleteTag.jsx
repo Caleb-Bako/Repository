@@ -1,10 +1,13 @@
 import axios from "axios";
 import './Home.css';
 
-export default function DeleteTag({id,setRedirect}){
+export default function DeleteTag({id,name,setRedirect}){
+
+
     async function deleteFolder(ev){
         ev.preventDefault();
         try{
+            await axios.delete(`/delete-folder/${name}`)
             await axios.delete(`/folderdel/${id}`);
             alert('Successful');
             setRedirect(true);

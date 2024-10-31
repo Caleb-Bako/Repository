@@ -1,28 +1,22 @@
 .logo{
-    font-family: 'Cedarville Cursive', cursive;
+    color: #00E588;
+    width: 40px;
+    height: 40px;
 }
 .navstrc{
     display: flex;
-    gap: 80%;
-    width: 100%;
-    padding: 30px 12px 20px 12px;
+    flex-direction: column;
+    height: 100vh;
+    padding: 47px 20px;
     align-items: center;
-    background-color: #3ee577;
+    background-color: #042531;
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-}
-.navbar{
-    display: flex;
-    gap: 5px;
-    background-color: rgb(135, 173, 222);
-    padding: 5px 9px;
-    border-radius: 20px;
-    align-items: center;
 }
 .profile-pic{
     width: 20px;
     height: 20px;
-    color: white;
+    color: #00E588;
 }
 .user-name{
     color: white;
@@ -47,7 +41,7 @@
     .navstrc{
         gap: 45%;
     }
-    .navbar{
+    .profile-icon{
         gap: 3px;
     }
     .profile-pic{
@@ -58,7 +52,7 @@
     .navstrc{
         gap: 48%;
     }
-    .navbar{
+    .profile-icon{
         gap: 3px;
     }
     .profile-pic{
@@ -69,7 +63,7 @@
     .navstrc{
         gap: 60%;
     }
-    .navbar{
+    .profile-icon{
         gap: 3px;
     }
     .profile-pic{
@@ -83,6 +77,6 @@
 }
 @media(min-width:1024px){
     .navstrc{
-        gap: 77%;
+        gap: 2%;
     }
 }

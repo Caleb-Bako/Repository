@@ -10,7 +10,7 @@ import SingleSharedFile from "../../ShareFile/SingleSharedFile";
 import LocationFeed from "./LocationFeed";
 
 export default function Home(){
-    const[profile,setProfile] = useState([]);
+    const[files,setFiles] = useState([]);
     const[name,setName] = useState('');
     const[showPopUp, setshowPopUp] = useState(false);
     const[showPopUps, setshowPopUps] = useState(false);
@@ -25,28 +25,71 @@ export default function Home(){
         }
         axios.get('/staff/'+id).then(response =>{
                 const{data} = response;
-                setProfile(data.profile);
+                setFiles(data.files);
                 setName(data.name);
             });
     },[id]);
 
-    async function saveFiles(ev){
-        ev.preventDefault();
+    async function uploadFiles(ev) {
+        ev.preventDefault(); // Prevent default form submission
+    
+        const data = new FormData();
+        
+        // Append the folder name to FormData
+        data.append('folderName', name); // Assuming 'name' holds the folder name
+        
+        // Append each selected file to FormData
+        files.forEach(file => {
+            data.append('file', file); // Append each selected file
+        });
+    
+        try {
+            const response = await axios.post('/upload', data, {
+                headers: {   
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            
+            const { data: filenames } = response;
+            setFiles(prev => [...prev, ...filenames]); // Update parent component with uploaded filenames
+            await saveFiles(); // Save files data if needed
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    
+    async function saveFiles() {
+        const fileNames = files.map(file => file.name);
+    
+        let updatedFiles = [];
+        
+        // Fetch existing files if updating an existing folder (identified by `id`)
+        if (id) {
+            const existingData = await axios.get(`/staff/${id}`);
+            updatedFiles = [...existingData.data.files, ...fileNames]; // Append new files to existing ones
+        } else {
+            updatedFiles = fileNames;
+        }
+    
         const staffData = {
-            profile,name,form
+            files: updatedFiles,
+            name,
+            form
         };
-        if(id){
-            await axios.put('/staff', 
-            {
-            id,...staffData
-         });
-         setRedirect(true);
-        }else{
+    
+        if (id) {
+            await axios.put('/staff', {
+                id,
+                ...staffData
+            });
+            setRedirect(true);
+        } else {
             await axios.post('/staff', staffData);
             alert('Success !!!');
             setRedirect(true);
         }
     }
+    
 
     if(redirect){
         return<Navigate to={'/home'}/>
@@ -63,7 +106,7 @@ console.log(form);
                     {id &&(
                         <div className="tags">
                             <div>
-                                <DeleteTag id={id} setRedirect={setRedirect} />
+                                <DeleteTag id={id} name={name} setRedirect={setRedirect} />
                             </div>
                             <div>
                                 <button onClick={() => setshowPopUp(true)}>Share</button>
@@ -72,11 +115,11 @@ console.log(form);
                     )}
                 </div>
                 <div className="fstr">
-                    <form onSubmit={saveFiles}>
-                        <h2>File Name: </h2>
-                        <input type="text" placeholder="File Name" value={name} onChange={ev => setName(ev.target.value)}/> 
+                    <form onSubmit={uploadFiles}>
+                        <h2>Folder Name: </h2>
+                        <input type="text" placeholder="Folder Name" value={name} onChange={ev => setName(ev.target.value)}/> 
                         <h2>Files:</h2>
-                            <FileUploader id={id} files={profile} onChange={setProfile} singleFile={singleFile} setSingleFile={setSingleFile} setshowPopUps={setshowPopUps}/>
+                            <FileUploader id={id} name={name} files={files} setFiles={setFiles} singleFile={singleFile} setSingleFile={setSingleFile} setshowPopUps={setshowPopUps}/>
                             <div className="file-form">
                                 <div>
                                     <label onClick={() => setForm('Public')}>Public</label>

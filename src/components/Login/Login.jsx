@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../../UserContext";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import './Login.css';
 
 export default function LoginPage(){
@@ -35,12 +35,12 @@ export default function LoginPage(){
                 <div className="circle"/>
             </div>
                 <div>
-                    <form onSubmit={handleLogin} className="formpg" >
+                    <form onSubmit={handleLogin} className="form-container" >
                         <h2 className="loginheader">Login</h2>
                         <div className="input-tag" >
-                            <h3 className="hlabel">Email:</h3>
+                            <h3 className="input-label">Email:</h3>
                                 <input type="email" placeholder="your@email.com" value={email} onChange={ev => setEmail(ev.target.value)}/> 
-                            <h3 className="hlabel">Password:</h3>
+                            <h3 className="input-label">Password:</h3>
                                 <input type="password" placeholder="password" value={pass} onChange={ev => setPass(ev.target.value)}/>
                         </div>
                         <div>

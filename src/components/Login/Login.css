@@ -1,4 +1,4 @@
-.formpg{
+.form-container{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -30,7 +30,7 @@
     background-color:lawngreen ;
     cursor: pointer;
 }
-.formpg h2{
+.form-container h2{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -57,7 +57,7 @@ input{
     padding-bottom: 30px;
     padding-left: 100px;
 }
-.hlabel{
+.input-label{
     padding-bottom: 10px;
 }
 .bl{
@@ -69,6 +69,7 @@ input{
     font-weight: 600;
     border-radius: 5px;
     color: white;
+    background-color: #3ee577;
 }
 .b2{
     margin-top: 10px;
@@ -92,12 +93,12 @@ input{
     height: 200px;
     width: 200px;
     position: absolute;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 .circle:first-child{
     background: linear-gradient(
-        #1845ad,
-        #23a2f6
+        #3ee577,
+        lawngreen
     );
     left: -80px;
     top: -80px;
