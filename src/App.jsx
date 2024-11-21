@@ -10,8 +10,11 @@ import { UserContextProvider } from "../UserContext";
 import WebPages from "./Home/LayoutPage";
 import GenDisplay from "./components/Pages/Display/FolderList/GenDisplay";
 
+// For localhost
+// axios.defaults.baseURL =  'http://localhost:4000';
 
-axios.defaults.baseURL =  'http://localhost:4000';
+//RenderLink
+axios.defaults.baseURL =  'https://filebarn.onrender.com';
 axios.defaults.withCredentials = true;
 //Labrador A Black - font style
 
