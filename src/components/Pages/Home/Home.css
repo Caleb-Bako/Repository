@@ -1,21 +1,21 @@
 .home-page{
     background: #f0f0f0;
-    padding: 40px 20px 0px 20px;
-    height: 100vh;
+    padding: 20px 20px 0px 20px;
 }
 
 /* FileUploader */
 .fileUploader{
     background: #f0f0f0;
-    padding: 20px 20px ;
-    height: fit-content;
     display: flex;
+    max-height: 300px;
+    overflow-y: scroll
 }
-.fstr{
-    padding: 10px 10px 24% 10px;
+.form_layout{
+    padding: 10px;
     background: white;
     box-shadow: 0 0 6px rgba(8,7,16,0.6);
-    height: 430px;
+    position: relative;
+    height: 90vh;
 }
 .fnm{
     display: flex;
@@ -33,7 +33,7 @@
     margin-right: 5px;
 }
 .uploadButton{
-    border: 2px solid rgb(135, 173, 222);
+    border: 2px solid #017E72;
     width: 155px;
     height: 95px;
     padding: 12px;
@@ -46,10 +46,11 @@
     width: 100px;
     height: 100px;
 }
-.upload-button{
-    margin: 4% 20px 10px 4px;
-
-    padding: 8px 47%;
+.upload_button{
+    padding: 8px 35%;
+    position: fixed;
+    top: 90%;
+    right: 10%;
 }
 .folder-pics{
     width: 40px;
@@ -58,9 +59,9 @@
 .group-names{
     align-items: center;
     display: flex;
-    padding: 10px 8px;
+    padding: 10px ;
     border-radius: 6px;
-    width: 1024px;
+    width: 800px;
     background-color: #ddffdd;
 }
 .tags{
@@ -85,14 +86,14 @@
     width: 80px;
     height: 64px;
     padding: 10px 13px 10px 16px ;
-    background-color: rgb(135, 173, 222);
+    background-color: #1E2A3B;
+    color: #00E588;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
     transition: all 300ms ease-in;
 }
 .file-form label :hover{
-    border-color: #646cff;
+    border-color: #017E72;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -104,6 +105,7 @@
 .f-sect{
     display: flex;
     align-items: center;
+    width: 400px;
 }
 .user-location{
     display: flex;
@@ -196,6 +198,26 @@
         gap: 49%;
         font-size: medium;
     }
+    .upload_button{
+        padding: 8px 20%;
+        right: 15%;
+        top:90%;
+    }
+    .form_layout{
+        height: 90vh;
+    }
+    .home-page{
+        height: 100vh;
+    }
+    .fnm{
+        width: 100px;
+    }
+    .f-sect{
+        width: 150px;
+    }
+    .fileUploader{
+        max-height: 550px;
+    }
 }
 @media(min-width:412px){
     .upload-button{
@@ -208,6 +230,10 @@
     .tags{
         gap: 55%;
     }
+    .file-form{
+        gap: 43%;
+    }
+
 }
 @media(min-width:540px){
     .upload-button{
@@ -252,6 +278,20 @@
     }
     .group-names{
         font-size: small;
-        width: 1150px;
+        width: 200%;
+    }
+    .upload_button{
+        right: 12%;
+        top: 90%;
+        padding: 8px 35%;
+    }
+    .form_layout{
+        height: 90vh;
+    }
+    .fileUploader{
+        max-height: 300px;
+    }
+    .fnm{
+        width:  600px;
     }
 }

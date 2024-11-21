@@ -19,9 +19,9 @@
     display: flex;
     gap: 10.5%;
     padding: 5px 0px 3px 5px;
-    color:white;
+    color:#5B6A8C;
     margin-bottom: 5px;
-    background-color:lightgreen;
+    border-bottom: 1px solid #C9D0E0;
 }
 .s-title{
     display: flex;
@@ -85,7 +85,7 @@
 }
 .top-section{
     align-items: center;
-    padding: 8px 5px;
+    padding: 18px 5px 8px 5px;
     display: flex;
     gap: 80%;
 }
@@ -115,11 +115,9 @@
     border: none;
 }
 .active-title{
-    background-color: rgb(135, 173, 222);
+    border-bottom: 2px solid #00E588;
     padding: 6px 5px;
-    border-radius: 6px;
-    color: white;
-    /* border-bottom: 3px solid rgb(135, 173, 222); */
+    transition: .5s ease;
 }
 .tab-content{
     display: none;
@@ -430,7 +428,7 @@
         font-size: larger;
     }
     .top-section{
-        gap: 67%;
+        gap: 71%;
     }
     .selct{
         gap: 45%;
@@ -515,9 +513,6 @@
         width: 300px;
         padding-left: 12%;
         font-size: larger;
-    }
-    .top-section{
-        gap: 67%;
     }
     .tab-list{
         gap: 17%;

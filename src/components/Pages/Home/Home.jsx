@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import NavBar from "../NavBar/NavBar";
 import axios from "axios";
 import './Home.css';
 import FileUploader from "./FileUploader";
@@ -104,7 +103,7 @@ export default function Home(){
                         </div>
                     )}
                 </div>
-                <div className="fstr">
+                <div className="form_layout">
                     <form onSubmit={uploadFiles}>
                         <h2>Folder Name: </h2>
                         <input type="text" placeholder="Folder Name" value={name} onChange={ev => setName(ev.target.value)}/> 
@@ -118,7 +117,7 @@ export default function Home(){
                                     <label onClick={() => setForm('Private')}>Private</label>
                                 </div>
                             </div>
-                            <button className="upload-button">Upload</button>
+                            <button className="upload_button">Upload</button>
                     </form>     
                 </div>
 

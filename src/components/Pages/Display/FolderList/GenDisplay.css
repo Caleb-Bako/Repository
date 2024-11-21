@@ -74,19 +74,22 @@
     color: #5B6A8C;
 }
 @media only screen and (max-width: 450px) {
-    .flex-section{
-      flex-direction: column;
-      gap: 50px;
+    .folder-titlez{
+        gap: 35%;
     }
-    .profile{
-      width: 340px;
-      align-items: flex-start;
+    .single-file-body{
+        gap: 5%;
+        font-size: x-small;
     }
-    .input-field {
-      width: 300px;
+    .file-name{
+        width: 100px;
     }
-    .check-container{
-      gap: 5px;
+    .folder-pic{
+        width: 15px;
+        height: 15px;
+    }
+    .file-date{
+        font-size: xx-small;
     }
   }
   

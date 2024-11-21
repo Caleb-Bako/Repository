@@ -39,9 +39,9 @@
     display: flex;
     gap: 18.5%;
     padding: 5px 0px 3px 5px;
-    color:white;
+    color:#6F7EA0;
     margin-bottom: 5px;
-    background-color:lightgreen;
+    border-bottom: 1px solid #C9D0E0;
 }
 .s-titlz{
     display: flex;
@@ -49,7 +49,7 @@
     padding: 5px 0px 3px 5px;
     color:white;
     margin-bottom: 5px;
-    background-color:lightgreen;
+    background-color:#00E588;
 }
 .share-str{
     font-size: small;

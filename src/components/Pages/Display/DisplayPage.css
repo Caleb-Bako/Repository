@@ -22,8 +22,8 @@
     padding: 8px 4px;
     width: 100px;
     height: 40px;
-    color: white;
-    background-color: rgb(135, 173, 222);
+    background-color: #1E2A3B;
+    color: #00E588;
     margin-bottom: 12px;
 }
 .file-strs{
@@ -252,7 +252,7 @@
         width: 95%;
     }
     .add-file{
-        gap: 15%;
+        gap: 10%;
     }
     .add-file-btn{
         padding: 10px 5px 10px 10px;
@@ -278,7 +278,7 @@
         width: 95%;
     }
     .add-file{
-        gap: 25%;
+        gap: 15%;
     }
     .add-file-btn{
         padding: 10px 5px 10px 10px;

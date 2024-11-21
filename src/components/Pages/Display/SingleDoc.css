@@ -29,7 +29,7 @@
     height: 20px;
     color: #353E4F;
 }
-.file-name{
+.single_file_name{
     font-weight: bold;
     align-items: center;
     color: #1E2A3B;
@@ -53,6 +53,7 @@
     align-items: center;
     background-color: #f0f0f0;
     margin-bottom: 3px;
+    border-radius: 5px;
 }
 .single_download{
     font-size: small;
@@ -73,3 +74,29 @@
     font-size: small;
     font-weight: bold;
 }
+@media only screen and (max-width: 450px) {
+    .file_name{
+        gap: 22%;
+    }
+    .file-list{
+        gap: 25%;
+    }
+    .single_file_name{
+        width: 100px;
+    }
+    .group-name{
+        width: 200px;
+    }
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Small Tablets */
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Large Tablets and Small Laptops */
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /*Large laptops and Desktops */
+  }

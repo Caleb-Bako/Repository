@@ -11,11 +11,11 @@ body{
 }
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #00E588;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #017E72;
 }
 
 h1 {
@@ -31,13 +31,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: rgb(135, 173, 222);
-  color: white;
+  background-color: #1E2A3B;
+  color: #00E588;
   cursor: pointer;
   transition: all 300ms ease-in;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #017E72;
   cursor: pointer;
   transform: scale(1.1);
 }

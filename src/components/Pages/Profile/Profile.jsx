@@ -55,7 +55,7 @@ export default function Profile(){
             <RegisterPage open={open} onClose={() => onClose(false)}/>
             <div className="profile-page">
                 <div className="view-sec">
-                    <div className={toggle === true ? 'active-left-tab' : 'left-sec'}>
+                    {/* <div className={toggle === true ? 'active-left-tab' : 'left-sec'}>
                         <div className="profile">
                             <div onClick={ev => setToggle((prev) => !prev)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"  className={toggle === true ? 'profile-piczz' : 'small-profile-piczz'}>
@@ -83,7 +83,7 @@ export default function Profile(){
                             </div>
 
                         </div>
-                    </div>
+                    </div> */}
                     <div className="right-sec">
                         {customers.role.includes("user")&&(
                             <div>
