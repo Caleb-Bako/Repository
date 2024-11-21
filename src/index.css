@@ -34,7 +34,7 @@ button {
   background-color: rgb(135, 173, 222);
   color: white;
   cursor: pointer;
- transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 button:hover {
   border-color: #646cff;

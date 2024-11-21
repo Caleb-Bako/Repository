@@ -31,28 +31,22 @@ export default function Home(){
     },[id]);
 
     async function uploadFiles(ev) {
-        ev.preventDefault(); // Prevent default form submission
+        ev.preventDefault();
     
         const data = new FormData();
-        
-        // Append the folder name to FormData
-        data.append('folderName', name); // Assuming 'name' holds the folder name
-        
-        // Append each selected file to FormData
+        data.append('folderName', name); 
         files.forEach(file => {
-            data.append('file', file); // Append each selected file
+            data.append('file', file); 
         });
-    
         try {
             const response = await axios.post('/upload', data, {
                 headers: {   
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            
             const { data: filenames } = response;
-            setFiles(prev => [...prev, ...filenames]); // Update parent component with uploaded filenames
-            await saveFiles(); // Save files data if needed
+            setFiles(prev => [...prev, ...filenames]); 
+            await saveFiles();
         } catch (err) {
             console.error(err);
         }
@@ -60,13 +54,11 @@ export default function Home(){
     
     async function saveFiles() {
         const fileNames = files.map(file => file.name);
-    
         let updatedFiles = [];
-        
-        // Fetch existing files if updating an existing folder (identified by `id`)
+
         if (id) {
             const existingData = await axios.get(`/staff/${id}`);
-            updatedFiles = [...existingData.data.files, ...fileNames]; // Append new files to existing ones
+            updatedFiles = [...existingData.data.files, ...fileNames]; 
         } else {
             updatedFiles = fileNames;
         }
@@ -90,16 +82,14 @@ export default function Home(){
         }
     }
     
-
     if(redirect){
         return<Navigate to={'/home'}/>
     }
-console.log(form);
+
     return(
         <div>
             <ShareFile id={id} open={showPopUp} onClose={() => setshowPopUp(false)}/>
             <SingleSharedFile singleFile={singleFile} open={showPopUps} onClose={() => setshowPopUps(false)}/>
-            <NavBar/>
             <div className="home-page">
                 <LocationFeed/>
                 <div>

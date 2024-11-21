@@ -1,0 +1,20 @@
+.main-body{
+    display: flex;
+    /* background: #EFF3FB; */
+}
+.single-doc{
+    padding: 1% 5%;
+}
+.single-doc input {
+    width: 400px;
+    border-radius: 0px;
+    color: black;
+}
+.single-doc input[type="text"]{
+    background-color: #ffff;
+    border-radius: 2px;
+    width: 100%;
+}
+.single-doc input[type="text"] :hover{
+    cursor: crosshair;
+}

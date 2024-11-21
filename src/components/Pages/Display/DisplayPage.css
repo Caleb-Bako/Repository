@@ -1,5 +1,5 @@
 /* DisplayPage */
-.main-body{
+.personal_docs-body{
     display: flex;
     /* background: #EFF3FB; */
 }
@@ -53,10 +53,13 @@
     height: 20px;
     color: #3ee577;
 }
-.single-doc input[type="text"]{
+.document_list input[type="text"]{
     background-color: #ffff;
     border-radius: 2px;
     width: 100%;
+}
+.document_list input[type="text"] :hover{
+    cursor: crosshair;
 }
 /* GenDisplay */
 .Doc{
@@ -83,7 +86,7 @@
     font-size: small;
     font-weight: bold;
 }
-.headings{
+.heading{
     display: flex;
     align-items: center;
     gap: 4px;
@@ -97,26 +100,44 @@
     font-weight: bold;
 }
 /* SingleDoc */
-.main{
+.personal_docs{
     background: #EFF3FB;
     padding: 40px 2px;
     width: 100%;
     height: 100vh;
 }
-.single-doc{
+.document_list{
     padding: 1% 5%;
 }
-.single-doc input {
+.document_list input {
     width: 400px;
     border-radius: 0px;
-    color: #f0f0f0;
+    color: black;
 }
-.single-doc :hover{
+.folder-header{
+    display: flex;
+    gap: 50%;
+    padding-left: 8%;
+    color: #C9D0E0;
+    border-bottom: #c0c7D4 2px solid;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.single-file-body :hover{
     cursor: pointer;
 }
 .file-pics{
     width: 40px;
     height: 40px;
+}
+.file_list{
+    border: none;
+    padding: 6px 14px;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-bottom: 3px;
 }
 .overlay{
     background-color: rgba(0, 0, 0, 0.5);
@@ -202,11 +223,11 @@
         width: 80px;
         height: 10px;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
         font-size: xx-small;
     }
-    .main{
+    .personal_docs{
         font-size: x-small;
     }
     .hpics{
@@ -237,7 +258,7 @@
         padding: 10px 5px 10px 10px;
         width: 100px;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
     }
     .download-folder{
@@ -263,7 +284,7 @@
         padding: 10px 5px 10px 10px;
         width: 100px;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
     }
     .download-folder{
@@ -286,7 +307,7 @@
     .add-file{
         gap: 45%;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
     }
     .download-folder{
@@ -305,7 +326,7 @@
     .add-file{
         gap: 62%;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
     }
     .download-folder{
@@ -323,7 +344,7 @@
     .add-file{
         gap: 70%;
     }
-    .folder-titles{
+    .folder-header{
         gap: 50%;
     }
     .download-folder{

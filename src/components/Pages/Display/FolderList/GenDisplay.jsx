@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './DisplayPage.css';
-import NavBar from "../NavBar/NavBar";
+import './GenDisplay.css';
+import NavBar from "../../NavBar/NavBar";
 
 export default function GenDisplay(){
     const[files,setFiles] = useState([]);
@@ -14,7 +14,6 @@ export default function GenDisplay(){
     },[]);
     return(
         <div className="main-body">
-            <NavBar/>
                 <div className="main">
                     <h1>FileBarn</h1>
                     <div className="single-doc">
@@ -39,7 +38,7 @@ export default function GenDisplay(){
                             
                         </div>
                         
-                        {files.length > 0 && files.filter(fil =>fil.name.includes(query)).map(fil =>(
+                        {files.length > 0 && files.filter(fil => fil.name.toLowerCase().includes(query.toLowerCase())).map(fil =>(
                             <Link to={'/files/'+fil._id}>
                                 <div className="single-file-body">
                                    <div className="folder-details">

@@ -53,7 +53,6 @@ export default function Profile(){
     return(
         <div>
             <RegisterPage open={open} onClose={() => onClose(false)}/>
-            <NavBar/>
             <div className="profile-page">
                 <div className="view-sec">
                     <div className={toggle === true ? 'active-left-tab' : 'left-sec'}>

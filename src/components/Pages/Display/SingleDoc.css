@@ -1,0 +1,75 @@
+.folder-content-body{
+    display: flex;
+}
+.folder-files input[type="text"]{
+    background-color: #ffff;
+    border-radius: 2px;
+    width: 100%;
+}
+.folder-files input[type="text"] :hover{
+    cursor: crosshair;
+}
+.folder-files{
+    padding: 1% 5%;
+    width: 100%;
+}
+.folder-files input {
+    width: 400px;
+    border-radius: 0px;
+    color: black;
+}
+.folder-download-button{
+    display: flex;
+    gap: 84%;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.folder-pic{
+    width: 20px;
+    height: 20px;
+    color: #353E4F;
+}
+.file-name{
+    font-weight: bold;
+    align-items: center;
+    color: #1E2A3B;
+    width: 500px;
+}
+.file_heading{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #1E2A3B;
+}
+.heading-pic{
+    width: 20px;
+    height: 20px;
+}
+.file-list{
+    border: none;
+    padding: 6px 14px;
+    display: flex;
+    gap: 45%;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-bottom: 3px;
+}
+.single_download{
+    font-size: small;
+}
+.group-name{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    gap: 5%;
+}
+.file_name{
+    border-bottom: #c0c7D4 2px solid;
+    color: #fff;
+    padding: 8px 24px;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 78%;
+    font-size: small;
+    font-weight: bold;
+}

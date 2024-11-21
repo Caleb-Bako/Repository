@@ -5,9 +5,10 @@ import LoginPage from "./components/Login/Login";
 import Profile from "./components/Pages/Profile/Profile";
 import Home from "./components/Pages/Home/Home";
 import DisplayPage from "./components/Pages/Display/DisplayPage";
-import GenDisplay from "./components/Pages/Display/GenDisplay";
 import SingleDoc from "./components/Pages/Display/SingleDoc";
 import { UserContextProvider } from "../UserContext";
+import WebPages from "./Home/WebPages";
+import GenDisplay from "./components/Pages/Display/FolderList/GenDisplay";
 
 
 axios.defaults.baseURL =  'http://localhost:4000';
@@ -19,14 +20,16 @@ function App() {
     <UserContextProvider>
       <Routes>
         <Route path="/" element = {<LoginPage/>}/>
-        <Route path="/register" element = {<RegisterPage/>}/>
-        <Route path="/profile" element = {<Profile/>}/>
-        <Route path="/profile/:id" element = {<Profile/>}/>
-        <Route path="/home/:id" element = {<Home/>}/>
-        <Route path="/home/new" element = {<Home/>}/>
-        <Route path="/home" element = {<DisplayPage/>}/> 
-        <Route path="/files" element = {<GenDisplay/>}/> 
-        <Route path="/files/:id" element = {<SingleDoc/>}/> 
+        <Route element={<WebPages/>}>
+          <Route path="/register" element = {<RegisterPage/>}/>
+          <Route path="/profile" element = {<Profile/>}/>
+          <Route path="/profile/:id" element = {<Profile/>}/>
+          <Route path="/home/:id" element = {<Home/>}/>
+          <Route path="/home/new" element = {<Home/>}/>
+          <Route path="/home" element = {<DisplayPage/>}/> 
+          <Route path="/files" element = {<GenDisplay/>}/> 
+          <Route path="/files/:id" element = {<SingleDoc/>}/> 
+        </Route>
       </Routes>
     </UserContextProvider>
   )
