@@ -7,7 +7,7 @@ import Home from "./components/Pages/Home/Home";
 import DisplayPage from "./components/Pages/Display/DisplayPage";
 import SingleDoc from "./components/Pages/Display/SingleDoc";
 import { UserContextProvider } from "../UserContext";
-import WebPages from "./Home/WebPages";
+import WebPages from "./Home/LayoutPage";
 import GenDisplay from "./components/Pages/Display/FolderList/GenDisplay";
 
 
