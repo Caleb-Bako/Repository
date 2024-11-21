@@ -37,6 +37,26 @@ FileBarn is a file repository platform where users can securely log in, store fi
 - **AWS S3**: Scalable cloud storage for secure file handling.
 
 ---
+## To-Do List
+
+### Features
+- [ ] Enable sharing files with multiple users.
+- [ ] Add file and folder download options.
+- [ ] Implement folder organization within S3 buckets.
+
+### User Interface
+- [ ] Refactor and polish the website's design.
+- [ ] Add responsive styles for mobile and tablet devices.
+- [ ] Improve file upload progress indicators.
+
+### Backend Enhancements
+- [ ] Optimize API endpoints for performance.
+- [ ] Add comprehensive validation for all inputs.
+- [ ] Implement detailed error handling and logging.
+
+### Testing
+- [ ] Write unit tests for backend functionality.
+- [ ] Implement end-to-end tests for critical features.
 
 ## Installation and Setup
 
@@ -45,7 +65,12 @@ FileBarn is a file repository platform where users can securely log in, store fi
 - MongoDB running locally or hosted (e.g., MongoDB Atlas).
 - AWS account with an S3 bucket set up.
 
+## Run Project
+- Start frontend - npm run frontend
+- Start Backend - npm run backend
+
+
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/FileBarn.git
+   git clone https://github.com/Caleb-Bako/Repository.git
