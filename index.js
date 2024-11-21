@@ -37,10 +37,23 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 
 app.use(express.json());
-app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:5173'
-}));
+const allowedOrigins = [
+    'http://localhost:5173', // for local development
+    'https://file-barn.onrender.com', // deployed frontend
+  ];
+  
+  // Enable CORS
+  app.use(cors({
+    origin: function (origin, callback) {
+      // Check if the origin is allowed
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // Allow credentials
+  }))
 console.log("sever connected");
 mongoose.connect(mongourl);
 
